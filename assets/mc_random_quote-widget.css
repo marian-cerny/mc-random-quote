@@ -1,0 +1,22 @@
+.mc_random_quote_container {
+    display: block;
+    border-top: 1px solid black;
+    margin-top: 2ex;
+}
+    
+.mc_random_quote_heading {
+	text-align: center;
+	text-decoration: underline;
+	font-weight: bold;
+	display: block;
+}
+
+.mc_random_quote_text:before, .mc_random_quote_text:after {
+	content: '"';
+	font-size: 110%;
+}
+
+.mc_random_quote_author {
+	font-weight: bold;
+	text-align: right;
+}
