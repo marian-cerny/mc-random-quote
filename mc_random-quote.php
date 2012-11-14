@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Random quote
-Description: Easily integrate a random quote section into your theme either by using the widget, or by creating your own markup. Quotes can be easily added and removed one by one, or imported from a CSV file. Supports loading new quotes with AJAX by clicking on the quote or using an interval.
+Description: Easily integrate a random quote section into your theme either by using the widget, or by creating your own markup. Quotes can be easily added and removed as posts (using custom post type). Supports loading new quotes with AJAX by clicking on the quote or using an interval.
 Version: 1.0
 Author: Marian Cerny
 Author URI: http://mariancerny.com
@@ -352,11 +352,12 @@ class mc_random_quote_widget extends WP_Widget
 // ----------------------------------------------------------------	
 // ****************************************************************
 
+global $mc_random_quote;
 $mc_random_quote = new mc_random_quote;
 
 function get_random_quote() 
 {
-	$mc_random_quote = new mc_random_quote;
+	global $mc_random_quote;
 	return $mc_random_quote->get_random_quote();
 }
 
